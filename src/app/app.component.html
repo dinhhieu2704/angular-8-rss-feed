@@ -1,0 +1,11 @@
+<!-- <button (click)="GetRssFeedData()">
+Get Rss Data
+</button> -->
+
+<h2>
+	{{RssData?.rss.channel[0].title[0]}}
+</h2>
+Total Item: {{RssData?.rss.channel[0].item.length}}
+<ul>
+	<li *ngFor="let o of sortData"><a href="{{o.link[0]}}">{{o.pubDate[0] | date: 'dd-MM-yyyy'}}-{{o.title[0]}}</a></li>
+</ul>
